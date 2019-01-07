@@ -10,7 +10,10 @@ import UIKit
 
 class Canvas: UIView {
     
-    fileprivate var lines = [[CGPoint]]()
+    fileprivate var lines = [Line]()
+    fileprivate var strokeColor = UIColor.black
+    fileprivate var strokeWidth: Float = 1
+    
     
     // public function
     func undo() {
@@ -21,7 +24,14 @@ class Canvas: UIView {
     func clear() {
         lines.removeAll()
         setNeedsDisplay()
-        
+    }
+    
+    func setStrokeColor(color: UIColor) {
+        self.strokeColor = color
+    }
+    
+    func setStrokeWidth(width: Float) {
+        self.strokeWidth = width
     }
     
     
@@ -31,21 +41,14 @@ class Canvas: UIView {
         
         guard let context = UIGraphicsGetCurrentContext() else { return }
         
-        // test lines
-        //        let startPoint = CGPoint(x: 0, y: 0)
-        //        let endPoint = CGPoint(x: 100, y: 100)
-        //
-        //        context.move(to: startPoint)
-        //        context.addLine(to: endPoint)
-        
-        // set up default line value
-        context.setStrokeColor(UIColor.red.cgColor)
-        context.setLineWidth(10)
-        context.setLineCap(.butt)
-        
+
         // same as: for line in lines {...}
         lines.forEach { (line) in
-            for (index, position) in line.enumerated() {
+            context.setStrokeColor(line.color.cgColor)
+            context.setLineWidth(CGFloat(line.strokeWidth))
+            context.setLineCap(.round)
+            
+            for (index, position) in line.points.enumerated() {
                 //start point
                 if (index == 0) {
                     context.move(to: position)
@@ -53,15 +56,16 @@ class Canvas: UIView {
                     context.addLine(to: position)
                 }
             }
+            context.strokePath()
         }
         
-        context.strokePath()
+        
         
     }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        lines.append([CGPoint]())
+        lines.append(Line.init(color: strokeColor, strokeWidth: strokeWidth, points: []))
     }
     
     
@@ -73,7 +77,7 @@ class Canvas: UIView {
         
         //remove the last element of lines array
         guard var lastLine = lines.popLast() else { return }
-        lastLine.append(point)
+        lastLine.points.append(point)
         
         lines.append(lastLine)
         

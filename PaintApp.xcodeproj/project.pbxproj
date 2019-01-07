@@ -14,6 +14,7 @@
 		F115099321E13CF000520FBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F115099121E13CF000520FBA /* LaunchScreen.storyboard */; };
 		F115099E21E13CF000520FBA /* PaintAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F115099D21E13CF000520FBA /* PaintAppTests.swift */; };
 		F11509A921E13CF000520FBA /* PaintAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11509A821E13CF000520FBA /* PaintAppUITests.swift */; };
+		F1A4158321E3FACE006A5812 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A4158221E3FACE006A5812 /* Line.swift */; };
 		F1F3EE2121E30A2300821BE2 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F3EE2021E30A2300821BE2 /* Canvas.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		F11509A421E13CF000520FBA /* PaintAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaintAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F11509A821E13CF000520FBA /* PaintAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintAppUITests.swift; sourceTree = "<group>"; };
 		F11509AA21E13CF000520FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1A4158221E3FACE006A5812 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		F1F3EE2021E30A2300821BE2 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +150,7 @@
 		F1F3EE1F21E30A0100821BE2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F1A4158221E3FACE006A5812 /* Line.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F115098B21E13CEF00520FBA /* ViewController.swift in Sources */,
+				F1A4158321E3FACE006A5812 /* Line.swift in Sources */,
 				F115098921E13CEF00520FBA /* AppDelegate.swift in Sources */,
 				F1F3EE2121E30A2300821BE2 /* Canvas.swift in Sources */,
 			);
