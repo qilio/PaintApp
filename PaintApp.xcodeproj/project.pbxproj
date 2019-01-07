@@ -14,6 +14,7 @@
 		F115099321E13CF000520FBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F115099121E13CF000520FBA /* LaunchScreen.storyboard */; };
 		F115099E21E13CF000520FBA /* PaintAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F115099D21E13CF000520FBA /* PaintAppTests.swift */; };
 		F11509A921E13CF000520FBA /* PaintAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11509A821E13CF000520FBA /* PaintAppUITests.swift */; };
+		F1F3EE2121E30A2300821BE2 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F3EE2021E30A2300821BE2 /* Canvas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		F11509A421E13CF000520FBA /* PaintAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaintAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F11509A821E13CF000520FBA /* PaintAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintAppUITests.swift; sourceTree = "<group>"; };
 		F11509AA21E13CF000520FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1F3EE2021E30A2300821BE2 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,10 @@
 		F115098721E13CEF00520FBA /* PaintApp */ = {
 			isa = PBXGroup;
 			children = (
+				F1F3EE1F21E30A0100821BE2 /* Model */,
+				F1F3EE1D21E309AD00821BE2 /* View */,
+				F1F3EE1E21E309F400821BE2 /* Controller */,
 				F115098821E13CEF00520FBA /* AppDelegate.swift */,
-				F115098A21E13CEF00520FBA /* ViewController.swift */,
 				F115098C21E13CEF00520FBA /* Main.storyboard */,
 				F115098F21E13CF000520FBA /* Assets.xcassets */,
 				F115099121E13CF000520FBA /* LaunchScreen.storyboard */,
@@ -123,6 +127,29 @@
 				F11509AA21E13CF000520FBA /* Info.plist */,
 			);
 			path = PaintAppUITests;
+			sourceTree = "<group>";
+		};
+		F1F3EE1D21E309AD00821BE2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1F3EE2021E30A2300821BE2 /* Canvas.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1F3EE1E21E309F400821BE2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F115098A21E13CEF00520FBA /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F1F3EE1F21E30A0100821BE2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +285,7 @@
 			files = (
 				F115098B21E13CEF00520FBA /* ViewController.swift in Sources */,
 				F115098921E13CEF00520FBA /* AppDelegate.swift in Sources */,
+				F1F3EE2121E30A2300821BE2 /* Canvas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
